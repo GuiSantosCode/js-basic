@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        /* Definição de ID para o elemento que será manipulado */
+        #msg { 
+            background: blue;
+            width: 200px; /* Adicionado para visualização */
+            height: 50px; /* Adicionado para visualização */
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    
+    <div id="msg">Clique em mim</div>
+    
+    <script>
+        // 1. Acesso direto ao elemento pelo ID (a forma mais rápida)
+        var d = window.document.getElementById('msg')
+        
+        // Manipulação do elemento
+        d.innerText = 'Estou aguardando...' 
+        d.style.background = 'green' // Mudei a cor para verde como no seu rascunho.
+        
+        // 2. Exemplo usando TagName (funcional, mas menos eficiente)
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p1.style.color = 'yellow'
+    </script>
+</body>
+</html>
