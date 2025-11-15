@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Calculadora de três números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Título-->
+    <h1>Calculadora de três números</h1>
+    <p>Digite três valores</p>
+    
+    <!--Inputs que vão receber os valores pelo usuário-->
+    <input type="number" name="n1" id="n1"> <br>
+    <input type="number" name="n2" id="n2"> <br>
+    <input type="number" name="n3" id="n3"> <br>
+    <!--Input que vai puxar a função somar() feita no JS-->
+    <input type="button" value="Somar" onclick="somar()">
+
+    <!--Div que vai receber a mensagem do resultado-->
+    <div id="res">Resultado: </div>
+
+    <script>
+        //Função que vai fazer a soma e dizer o resultado na tela
+        function somar(){
+            //Váriaveis que vão receber os valores do input em string
+            let caixa1 = document.getElementById("n1") 
+            let caixa2 = document.getElementById("n2")
+            let caixa3 = document.getElementById("n3")
+
+            //Váriaveis que vão transformar o valor dos inputs em number
+            let n1 = Number(caixa1.value)
+            let n2 = Number(caixa2.value)
+            let n3 = Number(caixa3.value)
+
+            //Váriavel que vai somar os valores
+            let soma = n1 + n2 + n3 
+
+            //Váriavel que recebe a div aonde a mensagem do resultado vai aparecer
+            let res = document.querySelector('div#res')
+
+            //Ponte entre o JS e o conteúdo HTML
+            //transformamos a div em uma mensagem com o cálculo da soma
+            res.innerHTML = `O resultado da soma de ${n1} + ${n2} + ${n3} é = <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+</html>

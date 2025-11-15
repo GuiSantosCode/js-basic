@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste gamer</title>
+</head>
+<body>
+    <h1>Teste gamer</h1>
+    <p>Joga videogames? [s/n]</p>
+    <input type="text" name="sn" id="sn">
+    <input type="button" value="Testar" onclick="teste()">
+
+    <div id="resultado">Resultado:</div>
+
+    <script>
+        function teste(){
+            let inputResposta = document.getElementById('sn')
+            let resposta = inputResposta.value
+
+            let resultado = document.getElementById('resultado')
+            if (resposta == 's') {
+                resultado.innerHTML = 'Resultado: Você é Gamer!'
+            } else if (resposta == 'n'){
+                resultado.innerHTML = 'Resultado: Você é Tchola!'
+            } else {
+                resultado.innerHTML = 'Resultado: É [s/n] seu burro(a)'
+            }
+        }
+    </script>
+</body>
+</html>

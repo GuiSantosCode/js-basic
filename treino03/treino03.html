@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tempo nosso</title>
+</head> 
+
+<body>
+    <h1>Tempo nosso! ❤️</h1>
+    <p>Quanto tempo vocês estão nessa jornada?</p>
+    <input type="datetime-local" name="inicio" id="inicio"> <br>
+    <input type="button" value="Calcular" onclick="calculo()">
+    <div id="relogioAntes"></div>
+    <div id="relogioAgora"></div>
+    <div id="resultado"></div>
+
+    <img id="pingo-menor" src="pingo.jpg" alt="Pingo">
+</body>
+    
+<script>
+    function calculo() {
+        let inputAntes = document.getElementById('inicio')
+        let antes = new Date(inputAntes.value)
+        let agora = new Date() 
+        let resultado = agora - antes // retornado em milissegundos
+
+        let anos = Math.floor(resultado / 31536000000)
+        let meses = Math.floor((resultado % 31536000000) / 2592000000)
+        let dias = Math.floor((resultado % 2592000000) / 86400000)
+        let horas = Math.floor((resultado % 86400000) / 3600000)
+        let minutos = Math.floor((resultado % 3600000) / 60000)
+        let segundos = Math.floor((resultado % 60000) / 1000)
+
+        let print1 = document.getElementById('relogioAntes')
+        let print2 = document.getElementById('relogioAgora')
+        let print3 = document.getElementById('resultado')
+        //print1.innerHTML = `${antes}`
+        //print2.innerHTML = `${agora}`
+        print3.innerHTML = `Vocês estão juntos a ${anos} anos, ${meses} meses, 
+        ${dias} dias, ${horas} horas, ${minutos} minutos, e ${segundos} segundos. <br> 
+        Que seja só uma fração do infinito que temos pela frente, eu te amo!
+        ❤️❤️❤️`
+    }
+</script>
+</html>

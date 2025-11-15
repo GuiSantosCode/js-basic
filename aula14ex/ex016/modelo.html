@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Progressão Aritmética</h1>
+    </header>
+
+    <section>
+        <div>  <!--INÍCIO | FIM | PASSO-->
+            <P>Início: </P>
+            <input type="number" name="inicio" id="inicio">
+            <p>Fim: </p>
+            <input type="number" name="fim" id="fim">
+            <p>Passo: </p>
+            <input type="number" name="passo" id="passo">
+            <button id="contar" onclick="contar()">Contar</button>
+        </div>
+        <br>
+        <div id="contagem"> <!--SAÍDA DO RESULTADO-->
+            Contando...
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Gui&Ruan</p>
+    </footer>
+
+    <script>
+        function contar() {
+            let inputInicio = document.getElementById('inicio')
+            let inputFim = document.getElementById('fim')
+            let inputPasso = document.getElementById('passo')
+        
+            let inicio = Number(inputInicio.value)
+            let fim = Number(inputFim.value)
+            let passo = Number(inputPasso.value) 
+            let contagem = document.getElementById('contagem')
+
+            if (inicio < fim) { 
+                while (inicio <= fim){ 
+                    contagem.innerHTML += `${inicio} 👉 `
+                    inicio = inicio + passo
+                }
+                contagem.innerHTML += `🏁 <br>`
+            } else {
+                while (inicio >= fim){ 
+                    contagem.innerHTML += `${inicio} 👉 `
+                    inicio = inicio - passo
+                }
+                contagem.innerHTML += `🏁 <br>`
+            }
+        }
+    </script>
+
+</body>
+</html>

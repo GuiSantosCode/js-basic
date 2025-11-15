@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Lucro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="caixa">
+        <h1>Lanches da Dona Rosália</h1>
+        <h2>Coloque seus ingredientes</h2>
+
+        <div id="ingredientes">
+            <p>Ingrediente</p>
+            <input type="text" placeholder="exemplo: trigo"> 
+
+            <p>Preço</p>
+            <input type="number" placeholder="3.69 = R$3.69"> 
+
+            <p>Quantidade comprada (g)</p>
+            <input type="number" placeholder="1500 = 1.5kg"> 
+            
+            <p>Quantidade Usada (g)</p>
+            <input type="number" placeholder="300 = 300g">
+        </div>
+
+        <button id="adicionar">Novo ingrediente</button>
+
+        <h2>Cálculo do lucro</h2>
+
+        <div id="calculo">
+            <p>Quantidade vendida</p>
+            <input type="number" placeholder="10 = 10 unidades">
+
+            <p>Preço sugerido do item</p>
+            <input type="number" placeholder="8.50 = R$8.50">
+
+            <button id="calcular()">Calcular</button>
+        </div>
+
+        <div id="resultado">R:</div>
+
+    </div>
+
+    <script src="rosalia.js"></script>
+
+</body>
+</html>
