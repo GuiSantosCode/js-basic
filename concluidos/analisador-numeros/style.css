@@ -17,12 +17,9 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-#div1 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+select#flista {
+    width: 150px;
 }
-
 
 footer {
     color: white;
